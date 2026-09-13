@@ -2,48 +2,46 @@
 
 ## 📌 Project Overview
 
-This project analyzes an e-commerce dataset to uncover meaningful insights about sales performance, customers, products, categories, sellers, regions, and business growth.
+This project analyzes Brazilian e-commerce sales data using **MySQL** to uncover business insights related to customers, products, categories, sellers, regions, and sales growth.
 
-The analysis was performed using **MySQL** with advanced SQL techniques including:
+The analysis is based on the **Brazilian E-Commerce Public Dataset by Olist**, containing approximately 100K orders and multiple interconnected datasets.
 
+The project demonstrates practical SQL skills including:
+
+- Data exploration
 - Multi-table joins
+- Aggregations
 - Common Table Expressions (CTEs)
-- Aggregate functions
-- Subqueries
 - Window functions
-- Ranking
-- Running totals
-- Month-over-month growth
-- Year-over-year growth
 - Customer segmentation
-- Revenue contribution analysis
-
-The goal of this project is to demonstrate how SQL can be used to transform raw transactional data into actionable business insights.
+- Revenue analysis
+- Time-series analysis
+- Business-driven SQL analysis
 
 ---
 
 ## 🎯 Business Objectives
 
-The analysis focuses on answering questions such as:
+The main objectives of this project are to:
 
-- How is overall sales performance?
-- Which product categories generate the most revenue?
-- Which customers contribute the most revenue?
-- How important are repeat customers?
-- Which sellers perform best?
-- Which regions generate the most sales?
-- What percentage of revenue comes from cross-state transactions?
-- Which categories are growing or declining?
-- How concentrated is revenue among customers and sellers?
-- How has the business performed over time?
+- Understand overall e-commerce performance
+- Identify high-value and repeat customers
+- Analyze customer purchasing behavior
+- Identify top-performing product categories
+- Evaluate seller performance
+- Analyze regional sales patterns
+- Measure monthly and yearly revenue growth
+- Identify revenue concentration
+- Answer practical business questions using SQL
+- Generate actionable business recommendations
 
 ---
 
-## 📊 Dataset
+## 🗂️ Dataset
 
-The project uses the **Brazilian E-Commerce Public Dataset by Olist**.
+**Dataset:** Brazilian E-Commerce Public Dataset by Olist
 
-Dataset source:
+Source:
 
 https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
@@ -57,25 +55,7 @@ The dataset contains information about:
 - Payments
 - Reviews
 - Geolocation
-- Product categories
-
----
-
-## 🗂️ Database Schema
-
-The analysis uses the following tables:
-
-| Table | Description |
-|---|---|
-| `customers` | Customer information and location |
-| `orders` | Order-level information and timestamps |
-| `products` | Product details and categories |
-| `sellers` | Seller information and location |
-| `order_items` | Products purchased within each order |
-| `order_payments` | Payment information |
-| `order_reviews` | Customer review information |
-| `geolocation` | Brazilian geographic information |
-| `category_translation` | Portuguese-to-English category mapping |
+- Product category translations
 
 ---
 
@@ -84,8 +64,32 @@ The analysis uses the following tables:
 - **MySQL**
 - SQL
 - MySQL Workbench
-- Git & GitHub
-- Kaggle Dataset
+- Git
+- GitHub
+
+### SQL Concepts Used
+
+- SELECT
+- WHERE
+- GROUP BY
+- HAVING
+- ORDER BY
+- JOIN
+- LEFT JOIN
+- CASE
+- Aggregate functions
+- Subqueries
+- CTEs
+- Window functions
+- RANK()
+- DENSE_RANK()
+- ROW_NUMBER()
+- LAG()
+- LEAD()
+- NTILE()
+- Running totals
+- Revenue contribution analysis
+- Time-series analysis
 
 ---
 
@@ -95,15 +99,7 @@ The analysis uses the following tables:
 E-Commerce-SQL-Analysis/
 │
 ├── data/
-│   ├── olist_customers_dataset.csv
-│   ├── olist_geolocation_dataset.csv
-│   ├── olist_order_items_dataset.csv
-│   ├── olist_order_payments_dataset.csv
-│   ├── olist_order_reviews_dataset.csv
-│   ├── olist_orders_dataset.csv
-│   ├── olist_products_dataset.csv
-│   ├── olist_sellers_dataset.csv
-│   └── product_category_name_translation.csv
+│   └── Olist CSV datasets
 │
 ├── sql/
 │   ├── 01_data_exploration.sql
@@ -117,4 +113,5 @@ E-Commerce-SQL-Analysis/
 ├── reports/
 │   └── final_business_report.pdf
 │
+├── .gitignore
 └── README.md
